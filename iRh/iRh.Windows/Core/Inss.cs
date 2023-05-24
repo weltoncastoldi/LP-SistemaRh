@@ -4,7 +4,7 @@ namespace iRh.Windows.Core
 {
     public static class Inss
     {
-        const double Faixa01 = 1302.0;
+        const double Faixa01 = 1320.0;
         const double Faixa02 = 2571.29;
         const double Faixa03 = 3856.94;
         const double Faixa04 = 7507.49;
@@ -14,7 +14,7 @@ namespace iRh.Windows.Core
             double valorInss = 0;
             if (salario <= Faixa01)
             {
-                valorInss = Core.Inss.CalculaFaixa1(salario);
+                valorInss = 0.075 * salario;
 
             }else if(salario <= Faixa02)
             {
@@ -47,7 +47,7 @@ namespace iRh.Windows.Core
         }
         private static double CalculaFaixa1(double salario)
         {
-            return (0.075 * salario);
+            return (0.075 * Faixa01);
         }
         private static double CalculaFaixa2(double salario)
         {
