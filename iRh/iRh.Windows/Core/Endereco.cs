@@ -22,9 +22,6 @@ namespace iRh.Windows.Core
 
         public Endereco ObterPorCep(string cep)
         {
-
-            var enderecoDaApi = new Endereco();
-            
             //Instancia HTTP que permite obter informações da Internet através de uma URL
             var http = new HttpClient();
 
@@ -35,7 +32,8 @@ namespace iRh.Windows.Core
             var resultContent = result.Content.ReadAsStringAsync().GetAwaiter().GetResult();
 
             //Converte a string json para nossa classe ViaCepWrapper
-            enderecoDaApi = JsonConvert.DeserializeObject<Endereco>(resultContent);
+            var enderecoDaApi = JsonConvert.DeserializeObject<Endereco>(resultContent);
+            
             return enderecoDaApi;
         }
     }

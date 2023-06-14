@@ -47,7 +47,11 @@ namespace iRh.Windows.Cadastros
 
             var enderecoCompleto = endereco.ObterPorCep(cepDigitado);
 
-
+            txtLogradouro.Text = enderecoCompleto.Logradouro;
+            txtBairro.Text = enderecoCompleto.Bairro;
+            txtCidade.Text = enderecoCompleto.Localidade;
+            txtDdd.Text = enderecoCompleto.Ddd;
+            cmbEstados.SelectedValue = enderecoCompleto.Uf;
         }
     }
 }
