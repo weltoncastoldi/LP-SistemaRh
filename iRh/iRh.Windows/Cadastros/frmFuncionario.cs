@@ -39,15 +39,15 @@ namespace iRh.Windows.Cadastros
             cmbDocumentoIdentidade.ValueMember = "Id";
         }
 
+        private void btnPesquisar_Click(object sender, System.EventArgs e)
+        {
+            var cepDigitado = txtCep.Text;
 
-        //AGORA ADICIONE UM COMBOX NA TELA para um campo: Documento
-        //de identificação dentro dele você deverá colocar uma LISTA de Documentos
-        //de identificação contendo ID (número sequencial) e
-        //Descricao (Texto que vai aparecer
-        //dentro do combobox que será o mesmo do documento
-        //ex.: 
-        //{Id = 1, Descricao="Carteira Nacional de Habilitação"};
+            var endereco = new Endereco();
+
+            var enderecoCompleto = endereco.ObterPorCep(cepDigitado);
 
 
+        }
     }
 }
