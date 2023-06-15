@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDataNascimento = new System.Windows.Forms.MaskedTextBox();
-            this.txtCep = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtLogradouro = new System.Windows.Forms.TextBox();
@@ -55,6 +54,7 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.cmbDocumentoIdentidade = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.txtCep = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -107,13 +107,6 @@
             this.txtDataNascimento.TabIndex = 5;
             this.txtDataNascimento.ValidatingType = typeof(System.DateTime);
             // 
-            // txtCep
-            // 
-            this.txtCep.Location = new System.Drawing.Point(39, 167);
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(98, 20);
-            this.txtCep.TabIndex = 7;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -125,7 +118,7 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(143, 164);
+            this.btnPesquisar.Location = new System.Drawing.Point(143, 163);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisar.TabIndex = 8;
@@ -286,11 +279,20 @@
             this.label12.TabIndex = 25;
             this.label12.Text = "DOCUMENTO DE INDENTIFICAÇÃO";
             // 
+            // txtCep
+            // 
+            this.txtCep.Location = new System.Drawing.Point(39, 164);
+            this.txtCep.Mask = "00000-000";
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(100, 20);
+            this.txtCep.TabIndex = 27;
+            // 
             // frmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(653, 431);
+            this.Controls.Add(this.txtCep);
             this.Controls.Add(this.cmbDocumentoIdentidade);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.linkLabel1);
@@ -310,7 +312,6 @@
             this.Controls.Add(this.txtLogradouro);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnPesquisar);
-            this.Controls.Add(this.txtCep);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtDataNascimento);
             this.Controls.Add(this.label3);
@@ -334,7 +335,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox txtDataNascimento;
-        private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.TextBox txtLogradouro;
@@ -355,5 +355,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.ComboBox cmbDocumentoIdentidade;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.MaskedTextBox txtCep;
     }
 }
